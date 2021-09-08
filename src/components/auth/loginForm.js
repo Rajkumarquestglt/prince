@@ -3,7 +3,7 @@ import React, { useState} from "react";
 import {loginSuccess} from '../../actions/';
 import {alertConstants} from '../../constants/alert.constants';
 import Form from './Form';
-
+import userData from '../../productData/userData'
 const LoginForm=()=>{
    
   const dispatch = useDispatch();
@@ -24,9 +24,11 @@ const LoginForm=()=>{
   };
 
     const handleLogin=(e)=>
-    {
+    {     console.log(email);
+          console.log(password);
+
         e.preventDefault();
-        if ((email==="quest@gmail.com") && (password ==="Test123")) {
+        if ((email===userData().email) && (password ===userData().password)) {
             setError("Login Successfully!");
             setLoading(true);
             dispatch(loginSuccess());

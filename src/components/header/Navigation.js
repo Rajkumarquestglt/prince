@@ -26,7 +26,7 @@ const Navigation=()=>{
        }
        {isLogin&&
        <li>
-        <button onClick={logoutHandler}>Logout</button>
+        <button className="logout-btn" onClick={logoutHandler}>Logout</button>
        </li>
        }
      </ul>

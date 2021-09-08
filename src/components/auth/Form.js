@@ -5,12 +5,12 @@ const Form=({handleLogin,handleEmail,handlePassword,err})=>{
            <FormCard>
            <div className="login__box">
                         <i className='bx bx-user login__icon'></i>
-                        <input type="text" onClick={handleEmail} id="email"  placeholder="Username" className="login__input" value="quest@gmail.com"/>
+                        <input type="text" onChange={handleEmail} id="email"  placeholder="Username" className="login__input"autoComplete="off"/>
                     </div>
 
                     <div className="login__box">
                         <i className='bx bx-lock-alt login__icon'></i>
-                        <input type="password" onClick={handlePassword} id="password"  placeholder="Password" className="login__input"value="Test123"/>
+                        <input type="password" onChange={handlePassword} id="password"  placeholder="Password" className="login__input"autoComplete="off"/>
                     </div>
 
                     <a href="/" className="login__forgot">Forgot password?</a>
